@@ -6,6 +6,7 @@ let xlData = XLSX.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
 
 methods.checkIfValid = (stdId, nationalCode) => {
     const found = xlData.find(element => parseInt(element.stdId) === parseInt(stdId) && parseInt(element.nationalCode) === parseInt(nationalCode));
+
     if (found) {
         return {
             "status": 1

@@ -8,7 +8,9 @@ let ticket1Model = new schema({
     sans: Number,
     reservationCode: Number,
     filename: String,
-    vaccineLink: String
+    vaccineLink: String,
+    name: String,
+    lname: String
 })
 
 module.exports = mongoose.model('ticket1', ticket1Model)

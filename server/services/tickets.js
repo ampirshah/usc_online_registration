@@ -6,6 +6,11 @@ let kavenegar = require("kavenegar");
 let api = kavenegar.KavenegarApi({
     apikey: "66526E7236302B4544346451596B41654B7748546A6B6676656C344A6965704D",
 });
+let XLSX = require('xlsx')
+let workbook = XLSX.readFile('./stdNumber.xlsx');
+let sheet_name_list = workbook.SheetNames;
+let xlData = XLSX.utils.sheet_to_json(workbook.Sheets[sheet_name_list[0]]);
+
 
 let privates = {
     sendLookupMessage: (code, phone) => {
@@ -106,6 +111,9 @@ methods.availableTime = (stdId, nationalCode, phoneNumber, callback) => {
 };
 
 methods.register = (vaccineLink, reserve, stdId, nationalCode, phoneNumber, filename, callback) => {
+    const found = xlData.find(element => parseInt(element.stdId) === parseInt(stdId) && parseInt(element.nationalCode) === parseInt(nationalCode));
+    let name = found['نام']
+    let lname = found['نام خانوادگي']
     let rnd = Math.floor(Math.random() * 90000) + 10000
     if (reserve['game1'] || reserve['game2']) {
         tickets1Model.findOne({nationalCode: nationalCode}).lean().exec((err, std) => {
@@ -127,7 +135,9 @@ methods.register = (vaccineLink, reserve, stdId, nationalCode, phoneNumber, file
                     sans: sans,
                     reservationCode: rnd,
                     filename: filename,
-                    vaccineLink: vaccineLink
+                    vaccineLink: vaccineLink,
+                    name:name,
+                    lname:lname
                 })
                 tickets1.save((err) => {
                     if (err) {
@@ -145,7 +155,9 @@ methods.register = (vaccineLink, reserve, stdId, nationalCode, phoneNumber, file
                                     phoneNumber: phoneNumber,
                                     reservationCode: rnd,
                                     filename: filename,
-                                    vaccineLink: vaccineLink
+                                    vaccineLink: vaccineLink,
+                                    name:name,
+                                    lname:lname
                                 })
 
                                 tickets2.save((err) => {
@@ -178,7 +190,9 @@ methods.register = (vaccineLink, reserve, stdId, nationalCode, phoneNumber, file
                     phoneNumber: phoneNumber,
                     reservationCode: rnd,
                     filename: filename,
-                    vaccineLink: vaccineLink
+                    vaccineLink: vaccineLink,
+                    name:name,
+                    lname:lname
                 })
                 tickets2.save((err) => {
                     if (err) {
