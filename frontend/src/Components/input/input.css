@@ -1,0 +1,35 @@
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 520px;
+    height: 108px;
+}
+.inputContainer label{
+    width: auto;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: right;
+    color: #484848;;
+    margin: 4px;
+}
+.inputContainer input{
+    max-width: 520px;
+    height: 46px;
+    max-height: 46px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 12px;
+    border: solid 1px #dadce0;
+    background-color: #fff;
+    outline: none;
+    padding: 0px 16px;
+}
+.inputContainer input:focus {
+    border: 1px solid #ababab;
+}
+.inputContainer span{
+    font-size: 14px;
+    color: #FC6434;
+    margin: 0px 4px;
+}

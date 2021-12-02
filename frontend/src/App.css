@@ -1,0 +1,319 @@
+.app{
+  display: flex;
+  justify-content: center;
+}
+.app .container{
+  width: 968px;
+  height: 100vh;
+  max-width: 968px;
+  /* background-color: #EEEEEE; */
+}
+.app .container .header{
+  width: auto;
+  height: 104px;
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 16px;
+  border-bottom: 1px solid #ccc;
+}
+.app .container .header img{
+  width: auto;
+  height: 96px;
+}
+.app .container .formContent{
+  margin: 0px 16px;
+  width: 360px;
+  height: calc(100vh - 308px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.app .container .formContainer{
+  width: 100%;
+  max-width: 100vw;
+  height: calc(100vh - 308px);
+  min-height: 480px;
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 760px) {
+  .app .container .formContainer{
+    height: fit-content;
+  }
+  .app .container .formContent{
+    height: fit-content;
+  }
+}
+.app .container .formContainer img{
+  max-width: 440px;
+  height: auto;
+}
+@media only screen and (max-width: 760px) {
+  .app .container .formContainer img{
+    display: none;
+  }
+}
+.app .container .formContent .firstRow{
+  display: flex;
+  align-items: center;
+}
+.app .container .formContent .firstRow > div{
+  max-width: 320px;
+}
+.app .container .formContent .firstRow .space{
+  width: 18px;
+  height: auto;
+ 
+}
+@media only screen and (max-width: 760px) {
+  .app .container .formContent .firstRow .space{
+    display: none;
+  }
+  .app .container .formContent .firstRow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.app .container .footer{
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #ccc;
+}
+.app .container .footer button{
+  all: unset;
+  width: 192px;
+  height: 48px;
+  cursor: pointer;
+  margin: 32px 0px;
+  border: 1px solid #000062;
+  text-align: center;
+  border-radius: 12px;
+}
+.app .container .footer button:hover{
+  background-color: #000062;
+  color: white;
+}
+
+.gameHeader{
+  margin: 8px 16px;
+}
+.gameContainer{
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (max-width: 680px) {
+  .gameContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.gameContainer .gameCol{
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0px 8px;
+}
+.gameContainer .gameCol p{
+  text-align: center;
+}
+.gameContainer .box{
+  width: 240px;
+  height: 72px;
+  border-radius: 12px;
+  border: 1px solid #d1d8e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8px 0px;
+  cursor: pointer;
+}
+.gameContainer .box:hover{
+  border: 1px solid #37b550;
+}
+.gameContainer .box p{
+  margin: 4px 0px;
+  text-align: center;
+}
+.gameContainer .box span{
+  padding: 2px 4px;
+  background-color: #ebf7ed;
+  color: #37b550;
+  border-radius: 8px;
+}
+.gameContainer .disable{
+  width: 240px;
+  height: 72px;
+  border-radius: 12px;
+  border: 1px solid #d1d8e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8px 0px;
+  cursor: not-allowed;
+}
+.gameContainer .disable p{
+  margin: 4px 0px;
+  text-align: center;
+}
+.gameContainer .disable span{
+  padding: 2px 4px;
+  background-color: #feebec !important;
+  color: #f23b41 !important;
+  border-radius: 8px;
+}
+.gameContainer .selected{
+  width: 240px;
+  height: 72px;
+  border-radius: 12px;
+  border: 1px solid #37b550;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8px 0px;
+  cursor: not-allowed;
+}
+.gameContainer .selected p{
+  margin: 4px 0px;
+  text-align: center;
+}
+.gameContainer .selected span{
+  padding: 2px 4px;
+  background-color: #ebf7ed !important;
+  color: #37b550 !important;
+  border-radius: 8px;
+}
+.partyContainer{
+  display: flex;
+  justify-content: center;
+}
+.partyBox{
+  width: 328px;
+  height: 72px;
+  border-radius: 12px;
+  border: 1px solid #d1d8e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8px 0px;
+  cursor: pointer;
+}
+.partyBox:hover{
+  border: 1px solid #37b550;
+}
+.partyBox p{
+  margin: 4px 0px;
+  text-align: center;
+}
+.partyBox span{
+  padding: 2px 4px;
+  background-color: #ebf7ed !important;
+  color: #37b550 !important;
+  border-radius: 8px;
+}
+.priceNote{
+  margin: 0px 16px;
+  font-size: 14px;
+}
+.payment{
+  margin: 16px;
+}
+.payment p span{
+  font-weight: bold;
+}
+.uploadImage{
+  margin-top: 64px;
+  display: flex;
+  justify-content: center;
+}
+.uploadImage div{
+  width: 328px;
+  height: 128px;
+  border: 1px dashed #d1d8e0;
+  border-radius: 12px;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.uploadImageDone{
+  margin-top: 64px;
+  display: flex;
+  justify-content: center;
+}
+.uploadImageDone div{
+  width: 328px;
+  height: 128px;
+  border: 1px dashed #37b550;
+  color: #37b550;
+  border-radius: 12px;
+  background-color: #ebf7ed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.ToastFrame{
+  direction: rtl;
+  text-align: right;
+  position: fixed;
+  top: 14px;
+  left: 50%;
+  height: 0px;
+  transform: translate(-50%, 0);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+}
+.alert {
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 400px;
+  min-width: 320px;
+  max-width: 448px;
+  width: auto;
+  min-height: 64px;
+  height: auto;
+  border-radius: 12px;
+  background-color: #f8faff;
+  color: #d90c0c;
+  opacity: 1;
+  transition: opacity 0.6s;
+  display: flex;
+  justify-content: space-between;
+}
+.hideAlert {
+  display: none;
+}
+.closebtn {
+  color: #d90c0c;
+  width: 16px;
+  height: 16px;
+  transition: 0.3s;
+  margin-top: 8px;
+  cursor: pointer;
+}
+.closebtn img{
+  width: 16px;
+  height: 16px;
+}
+
+.alldone{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 160px;
+}
+.alldone p{
+  margin: 4px;
+}
