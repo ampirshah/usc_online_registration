@@ -15,7 +15,7 @@ router.get('/first', function (req, res) {
                 success: false, error: "خطا! لطفا با شماره 09388148370 تماس بگیرید"
             });
         } else {
-            const fields = ["stdId", "nationalCode", "phoneNumber", "sans", "reservationCode", "filename", "vaccineLink"];
+            const fields = ["stdId", "nationalCode", "phoneNumber", "sans", "reservationCode", "filename", "vaccineLink", "name", "lname"];
             const opts = {fields};
 
             try {
@@ -49,7 +49,7 @@ router.get('/second', function (req, res) {
                 success: false, error: "خطا! لطفا با شماره 09388148370 تماس بگیرید"
             });
         } else {
-            const fields = ["stdId", "nationalCode", "phoneNumber", "reservationCode", "filename", "vaccineLink"];
+            const fields = ["stdId", "nationalCode", "phoneNumber", "reservationCode", "filename", "vaccineLink", "name", "lname"];
             const opts = {fields};
 
             try {
