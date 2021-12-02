@@ -278,6 +278,7 @@ const App = () =>{
           <div className="alldone">
             <p>رزرو با موفقیت انجام شد!</p>
             <p>کد پیگیری : {form.reservationCode}</p>
+            <p>در صورت هر گونه سوال به آیدی b_aghataher در تلگرام پیام دهید.</p>
             <p>: )</p>
           </div>
         )
